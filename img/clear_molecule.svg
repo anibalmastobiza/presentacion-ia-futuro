@@ -1,0 +1,12 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f0f0f0"/>
+  <!-- Simple ball-and-stick style molecule -->
+  <g stroke="#444" stroke-width="2" fill="#69c">
+    <circle cx="150" cy="150" r="20"/>
+    <circle cx="250" cy="150" r="20"/>
+    <circle cx="200" cy="80" r="20"/>
+    <line x1="150" y1="150" x2="200" y2="80"/>
+    <line x1="200" y1="80" x2="250" y2="150"/>
+    <line x1="150" y1="150" x2="250" y2="150"/>
+  </g>
+</svg>
