@@ -10,9 +10,9 @@ Esta presentación fue impartida por Aníbal M. Astobiza el 3 de Julio de 2025 e
 
 Puedes visualizar la presentación directamente en tu navegador a través del siguiente enlace:
 
-**[https://tu-usuario.github.io/nombre-del-repositorio/](https://tu-usuario.github.io/nombre-del-repositorio/)**
+**[https://anibalmastobiza.github.io/presentacion-ia-futuro/](https://tu-usuario.github.io/nombre-del-repositorio/)**
 
-*(Reemplaza la URL con el enlace que te ha proporcionado GitHub Pages)*
+
 
 Alternativamente, puedes descargar este repositorio y abrir el archivo `index.html` en tu navegador local.
 
