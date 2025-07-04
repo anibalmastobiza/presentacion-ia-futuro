@@ -152,3 +152,9 @@ blockquote {
 /* -- CONTROLES DE REVEAL.JS -- */
 .reveal .progress { color: #0366d6; }
 .reveal .controls { color: #0366d6; }
+
+/* Ensure charts fit within slide width */
+.reveal canvas {
+    max-width: 100%;
+    height: auto;
+}
