@@ -10,7 +10,7 @@ Esta presentación fue impartida por Aníbal M. Astobiza el 3 de Julio de 2025 e
 
 Puedes visualizar la presentación directamente en tu navegador a través del siguiente enlace:
 
-**[https://anibalmastobiza.github.io/presentacion-ia-futuro/](https://tu-usuario.github.io/nombre-del-repositorio/)**
+**[https://anibalmastobiza.github.io/presentacion-ia-futuro/](https://anibalmastobiza.github.io/presentacion-ia-futuro/)**
 
 
 
