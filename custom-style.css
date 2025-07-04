@@ -1,1 +1,154 @@
+/* -- FUENTES Y COLORES GLOBALES -- */
+:root {
+    --r-background-color: #fff;
+    --r-main-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --r-main-font-size: 32px;
+    --r-main-color: #222;
+    --r-heading-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --r-heading-color: #222;
+    --r-heading-font-weight: 600;
+    --r-link-color: #0366d6;
+    --r-selection-background-color: rgba(3, 102, 214, 0.3);
+}
 
+/* -- ESTILO BASE DE REVEAL.JS -- */
+.reveal {
+    font-family: var(--r-main-font);
+    font-size: var(--r-main-font-size);
+    font-weight: normal;
+    color: var(--r-main-color);
+}
+
+.reveal .slides {
+    text-align: left;
+}
+
+/* -- SOLUCIÓN AL LAYOUT -- */
+.reveal .slides section {
+    box-sizing: border-box; /* Asegura que padding no afecte el tamaño total */
+    min-height: 100%; /* Permite que la diapositiva ocupe al menos toda la altura */
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 40px;
+}
+
+/* Evita que las diapositivas con fondo de color tengan padding extra */
+.reveal .slides section[data-background] {
+    display: block; /* Restaura el comportamiento por defecto para las que tienen fondo */
+}
+
+/* Permite que las diapositivas scrollables usen todo el alto */
+.reveal .slides section.scrollable {
+    justify-content: flex-start;
+}
+
+/* -- ESTILOS PARA TÍTULOS -- */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    font-family: var(--r-heading-font);
+    font-weight: var(--r-heading-font-weight);
+    line-height: 1.2;
+    text-transform: none;
+    color: var(--r-heading-color);
+    text-align: left;
+    margin: 0.5em 0;
+}
+
+.reveal h1 { font-size: 2.5em; }
+.reveal h2 { font-size: 1.8em; }
+.reveal h3 { font-size: 1.3em; }
+
+/* -- DIAPOSITIVA DE TÍTULO -- */
+.title-slide {
+    text-align: left;
+    justify-content: center; /* Asegura centrado vertical en la diapositiva de título */
+}
+.title-slide h1 { font-size: 3em; margin-bottom: 0.3em; }
+.title-slide h2 { font-size: 1.5em; font-weight: normal; color: #555; } /* Contraste mejorado */
+.title-slide h3 { font-size: 1.2em; font-weight: normal; margin-top: 2em; }
+.title-slide h4 { font-size: 1em; font-weight: normal; color: #555; } /* Contraste mejorado */
+
+
+/* -- COMPONENTES PERSONALIZADOS -- */
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente los elementos de las columnas */
+    gap: 40px;
+    width: 100%;
+}
+.column {
+    flex: 1;
+}
+
+blockquote {
+    background: #f6f8fa;
+    border-left: 4px solid #0366d6;
+    padding: 1em;
+    font-style: normal;
+}
+
+.highlight-box {
+    background: #e1f5fe;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Caja de mensajes clave mejorada */
+.key-message-box {
+    background: #e1f5fe;
+    border: 3px solid #0366d6;
+    border-radius: 12px;
+    padding: 40px;
+    display: inline-block;
+    max-width: 90%;
+    margin-bottom: 1em; /* Espacio para el texto de abajo */
+}
+.key-message-box p {
+    font-size: 1.4em;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.quote-footer {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 2em;
+}
+
+/* -- LISTAS Y TABLAS -- */
+.reveal ul, .reveal ol {
+    margin-left: 1em;
+}
+
+.reveal ul li {
+    margin-bottom: 0.5em; /* Añade espacio entre elementos de lista */
+}
+
+/* Estilo para la lista de referencias scrollable */
+.references {
+    font-size: 0.8em;
+    height: 100%;
+    overflow-y: auto; /* Permite el scroll vertical */
+}
+.references li {
+    margin-bottom: 1em;
+}
+
+
+/* -- ELEMENTOS DE CÓDIGO -- */
+.reveal pre {
+    box-shadow: none;
+    font-size: 0.7em;
+    width: 100%;
+}
+.reveal pre code {
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* -- CONTROLES DE REVEAL.JS -- */
+.reveal .progress { color: #0366d6; }
+.reveal .controls { color: #0366d6; }
