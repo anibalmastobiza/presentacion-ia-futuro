@@ -41,6 +41,7 @@
 /* Permite que las diapositivas scrollables usen todo el alto */
 .reveal .slides section.scrollable {
     justify-content: flex-start;
+    overflow-y: auto;
 }
 
 /* -- ESTILOS PARA TÍTULOS -- */
