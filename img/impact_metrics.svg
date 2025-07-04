@@ -10,4 +10,21 @@
     <rect x="310" y="71" width="80" height="229"/>
     <rect x="420" y="157" width="80" height="143"/>
   </g>
+  <!-- Value labels -->
+  <g fill="#000" font-size="12" text-anchor="middle">
+    <text x="130" y="90">200</text>
+    <text x="240" y="183">107</text>
+    <text x="350" y="61">229</text>
+    <text x="460" y="147">143</text>
+  </g>
+  <!-- Category labels -->
+  <g fill="#000" font-size="14" text-anchor="middle">
+    <text x="130" y="320">Biología</text>
+    <text x="240" y="320">Medicina</text>
+    <text x="350" y="320">Química</text>
+    <text x="460" y="320">Ingeniería</text>
+  </g>
+  <!-- Axis titles -->
+  <text x="300" y="340" text-anchor="middle" font-size="16">Campos</text>
+  <text x="15" y="170" text-anchor="middle" font-size="16" transform="rotate(-90, 15, 170)">Citas (miles)</text>
 </svg>
