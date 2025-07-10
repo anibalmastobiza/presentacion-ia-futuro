@@ -41,6 +41,7 @@
 /* Permite que las diapositivas scrollables usen todo el alto */
 .reveal .slides section.scrollable {
     justify-content: flex-start;
+    height: 100%;
     overflow-y: auto;
 }
 
@@ -94,6 +95,7 @@ blockquote {
     border-radius: 8px;
     padding: 20px;
     margin: 20px 0;
+    word-wrap: break-word;
 }
 
 /* Caja de mensajes clave mejorada */
