@@ -73,7 +73,7 @@
 .two-column {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centra verticalmente los elementos de las columnas */
+    align-items: flex-start; /* Alinea arriba los elementos de las columnas */
     gap: 40px;
     width: 100%;
 }
@@ -93,6 +93,9 @@ blockquote {
     border-radius: 8px;
     padding: 20px;
     margin: 20px 0;
+}
+.highlight-box p {
+    overflow-wrap: anywhere;
 }
 
 /* Caja de mensajes clave mejorada */
