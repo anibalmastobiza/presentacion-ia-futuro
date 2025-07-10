@@ -73,12 +73,13 @@
 .two-column {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centra verticalmente los elementos de las columnas */
+    align-items: flex-start; /* Evita el centrado vertical que puede cortar texto */
     gap: 40px;
     width: 100%;
 }
 .column {
     flex: 1;
+    min-width: 0; /* Permite que el contenido se ajuste sin desbordar */
 }
 
 blockquote {
@@ -93,6 +94,7 @@ blockquote {
     border-radius: 8px;
     padding: 20px;
     margin: 20px 0;
+    overflow-wrap: anywhere; /* Asegura que el texto largo no se corte */
 }
 
 /* Caja de mensajes clave mejorada */
