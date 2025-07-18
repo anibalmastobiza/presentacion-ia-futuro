@@ -15,7 +15,7 @@
         :root {
             --r-background-color: #fff;
             --r-main-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            --r-main-font-size: 32px;
+            --r-main-font-size: 28px;
             --r-main-color: #222;
             --r-heading-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
             --r-heading-color: #222;
@@ -35,6 +35,12 @@
             color: var(--r-main-color);
         }
         
+        .reveal .slides section {
+            height: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        
         .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
             font-family: var(--r-heading-font);
             font-weight: var(--r-heading-font-weight);
@@ -46,28 +52,24 @@
         }
         
         .reveal h1 {
-            font-size: 2.5em;
+            font-size: 2.2em;
         }
         
         .reveal h2 {
-            font-size: 1.8em;
+            font-size: 1.6em;
         }
         
         .reveal h3 {
-            font-size: 1.3em;
+            font-size: 1.2em;
         }
         
         .reveal .slides {
             text-align: left;
         }
         
-        .reveal .slides section {
-            padding: 20px 0;
-        }
-        
         .reveal pre {
             box-shadow: none;
-            font-size: 0.7em;
+            font-size: 0.6em;
             width: 100%;
         }
         
@@ -86,8 +88,9 @@
         .reveal blockquote {
             background: #f6f8fa;
             border-left: 4px solid #0366d6;
-            padding: 1em;
+            padding: 0.8em;
             font-style: normal;
+            margin: 10px 0;
         }
         
         .reveal .progress {
@@ -102,11 +105,12 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            margin: 10px 0;
         }
         
         .column {
             flex: 1;
-            padding: 0 20px;
+            padding: 0 10px;
         }
         
         .column:first-child {
@@ -120,15 +124,17 @@
         .highlight-box {
             background: #e1f5fe;
             border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 0.9em;
         }
         
         .warning-box {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 0.9em;
         }
         
         .center {
@@ -137,7 +143,7 @@
         
         .badge {
             display: inline-block;
-            padding: 4px 8px;
+            padding: 3px 6px;
             background: #0366d6;
             color: white;
             border-radius: 4px;
@@ -157,18 +163,24 @@
         
         .reveal ul, .reveal ol {
             margin-left: 1em;
+            font-size: 0.95em;
+        }
+        
+        .reveal li {
+            margin-bottom: 0.3em;
         }
         
         .reveal table {
             margin: auto;
             border-collapse: collapse;
             border-spacing: 0;
+            font-size: 0.8em;
         }
         
         .reveal table th,
         .reveal table td {
             text-align: left;
-            padding: 0.5em 1em;
+            padding: 0.4em 0.8em;
             border-bottom: 1px solid #ddd;
         }
         
@@ -179,37 +191,39 @@
         
         /* Title slide styling */
         .title-slide h1 {
-            font-size: 3em;
-            margin-bottom: 0.3em;
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
         }
         
         .title-slide h2 {
-            font-size: 1.5em;
+            font-size: 1.3em;
             font-weight: normal;
             color: #666;
         }
         
         .title-slide h3 {
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: normal;
-            margin-top: 2em;
+            margin-top: 1.5em;
         }
         
         .title-slide h4 {
-            font-size: 1em;
+            font-size: 0.9em;
             font-weight: normal;
             color: #666;
         }
         
         /* Math styling */
         .reveal .MathJax {
-            font-size: 0.9em;
+            font-size: 0.8em;
         }
         
         /* Image styling */
         .reveal img {
             border: none;
             box-shadow: none;
+            max-width: 100%;
+            height: auto;
         }
         
         /* Fragment animations */
@@ -219,18 +233,18 @@
         
         /* Table styling for complex tables */
         .reveal table.small-text {
-            font-size: 0.7em;
+            font-size: 0.65em;
         }
         
         .reveal table.small-text td,
         .reveal table.small-text th {
-            padding: 0.3em 0.5em;
+            padding: 0.3em 0.4em;
         }
         
         /* Scrollable sections */
         .scrollable {
             overflow-y: auto;
-            max-height: 90vh;
+            max-height: 85vh;
         }
         
         /* Key message box */
@@ -238,17 +252,38 @@
             background: #e1f5fe;
             border: 2px solid #0366d6;
             border-radius: 8px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 80%;
+            padding: 15px;
+            margin: 15px auto;
+            max-width: 85%;
         }
         
         /* Quote footer */
         .quote-footer {
             font-style: italic;
-            margin-top: 2em;
-            padding-top: 1em;
+            margin-top: 1.5em;
+            padding-top: 0.8em;
             border-top: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+        
+        /* Canvas adjustments */
+        canvas {
+            max-height: 280px;
+        }
+        
+        /* SVG adjustments */
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Prevent overflow */
+        .reveal .slides section > * {
+            max-width: 100%;
+        }
+        
+        .reveal p {
+            margin: 0.5em 0;
         }
     </style>
 </head>
@@ -262,45 +297,45 @@
                 <h2>La espada de doble filo: Progreso, riesgo epistémico y el cultivo de monoculturas</h2>
                 <h3>Aníbal M. Astobiza</h3>
                 <h4>Universidad de Granada</h4>
-                <img src="UGR-MARCA-01-color.png" alt="Logo Universidad de Granada" style="margin-top: 0.5em; max-width: 250px; max-height: 150px; height: auto;">
+                <img src="UGR-MARCA-01-color.png" alt="Logo Universidad de Granada" style="margin-top: 0.5em; max-width: 200px; max-height: 120px;">
             </section>
             
             <!-- Resumen Ejecutivo -->
             <section>
                 <h2>Resumen Ejecutivo</h2>
                 <ul>
-                    <li>✓ La teoría no desaparece: se redistribuye en las infraestructuras de datos y arquitecturas de ML</li>
-                    <li>⚠️ La automatización acelera el descubrimiento pero introduce sesgos sistémicos y crisis de reproducibilidad</li>
-                    <li>👩‍🎓 El científico evoluciona de ejecutor a director estratégico, validador crítico y curador epistémico</li>
+                    <li>✓ La teoría no desaparece: se redistribuye en infraestructuras de datos</li>
+                    <li>⚠️ La automatización acelera pero introduce sesgos y crisis de reproducibilidad</li>
+                    <li>👩‍🎓 El científico evoluciona a director estratégico y curador epistémico</li>
                     <li>🎭 Las ilusiones de entendimiento amenazan la comprensión genuina</li>
-                    <li>🌾 Riesgo de monoculturas científicas que reducen la diversidad epistémica</li>
+                    <li>🌾 Riesgo de monoculturas que reducen la diversidad epistémica</li>
                 </ul>
             </section>
             
             <!-- Motivación: Crisis de Descubrimiento -->
             <section>
-                <h2>La Crisis Percibida del Descubrimiento Científico</h2>
+                <h2>La Crisis Percibida del Descubrimiento</h2>
                 <div class="two-column">
                     <div class="column">
                         <h3>La Carga del Conocimiento:</h3>
-                        <ul>
-                            <li>Generar nuevas ideas es exponencialmente más costoso</li>
-                            <li>La "fricción científica" afecta todos los dominios</li>
-                            <li>Rendimientos decrecientes del esfuerzo investigador</li>
+                        <ul style="font-size: 0.9em;">
+                            <li>Ideas nuevas exponencialmente costosas</li>
+                            <li>"Fricción científica" en todos los dominios</li>
+                            <li>Rendimientos decrecientes del esfuerzo</li>
                         </ul>
                     </div>
                     <div class="column">
-                        <div class="highlight-box">
+                        <div class="highlight-box" style="font-size: 0.85em;">
                             <h4>Evidencia empírica:</h4>
                             <ul style="font-size: 0.9em;">
-                                <li><strong>Ley de Moore:</strong> 20× más investigadores para mismo resultado</li>
-                                <li><strong>Agricultura:</strong> 6-20× más I+D para mejoras constantes</li>
-                                <li><strong>Medicina:</strong> Costo creciente por avance marginal</li>
+                                <li><strong>Ley de Moore:</strong> 20× más investigadores</li>
+                                <li><strong>Agricultura:</strong> 6-20× más I+D</li>
+                                <li><strong>Medicina:</strong> Costo creciente</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <p class="fragment center" style="margin-top: 1em; color: #dc3545; font-weight: bold;">
+                <p class="fragment center" style="margin-top: 0.5em; color: #dc3545; font-weight: bold; font-size: 0.9em;">
                     Esta ansiedad institucional crea el contexto perfecto para la "salvación" por IA
                 </p>
             </section>
@@ -308,11 +343,11 @@
             <!-- Cita Provocadora -->
             <section>
                 <h2>La Provocación de Chris Anderson</h2>
-                <blockquote>
+                <blockquote style="font-size: 0.95em;">
                     "El diluvio de datos hace obsoleto el método científico. Con suficientes datos, los números hablan por sí mismos. La correlación es suficiente."
                 </blockquote>
-                <p style="text-align: right">— Chris Anderson, <em>Wired</em> (2008)</p>
-                <p class="fragment" style="color: #dc3545; font-weight: bold; margin-top: 2em;">
+                <p style="text-align: right; font-size: 0.9em;">— Chris Anderson, <em>Wired</em> (2008)</p>
+                <p class="fragment" style="color: #dc3545; font-weight: bold; margin-top: 1.5em;">
                     ¿Realmente marca el Big Data el fin de la teoría científica?
                 </p>
             </section>
@@ -320,7 +355,7 @@
             <!-- Hoja de Ruta Ampliada -->
             <section>
                 <h2>Hoja de Ruta</h2>
-                <ol>
+                <ol style="font-size: 0.95em;">
                     <li class="fragment">La epistemología cambiante del conocimiento científico</li>
                     <li class="fragment">Las cuatro visiones de la IA como asistente de investigación</li>
                     <li class="fragment">El costo cognitivo: ilusiones de entendimiento</li>
@@ -342,21 +377,21 @@
                 <div class="two-column">
                     <div class="column">
                         <h3>Conceptos Clave:</h3>
-                        <ul>
-                            <li><strong style="color: #dc3545;">Datos como categoría relacional</strong>: no son "dados", son construidos</li>
-                            <li><strong style="color: #dc3545;">Viaje de datos</strong>: Descontextualización → Recontextualización</li>
-                            <li><strong style="color: #dc3545;">Curadores como productores</strong>: trabajo invisible de hacer datos útiles</li>
+                        <ul style="font-size: 0.9em;">
+                            <li><strong style="color: #dc3545;">Datos relacionales</strong>: construidos, no dados</li>
+                            <li><strong style="color: #dc3545;">Viaje de datos</strong>: Des/Recontextualización</li>
+                            <li><strong style="color: #dc3545;">Curadores</strong>: trabajo invisible crucial</li>
                         </ul>
                     </div>
                     <div class="column">
-                        <div style="text-align: center; overflow-y: auto; max-height: 80vh;">
-                            <div style="background: #f6f8fa; border-radius: 8px; padding: 20px; margin: 5px; display: inline-block; min-width: 220px;">Contexto Original</div>
-                            <div style="font-size: 1.5em; margin: 5px 0;">↓</div>
-                            <div style="background: white; border: 2px solid #0366d6; border-radius: 8px; padding: 20px; margin: 5px; display: inline-block; min-width: 220px;">Descontextualización</div>
-                            <div style="font-size: 1.5em; margin: 5px 0;">↓</div>
-                            <div style="background: #f6f8fa; border-radius: 8px; padding: 20px; margin: 5px; display: inline-block; min-width: 220px;">Viaje/Curación</div>
-                            <div style="font-size: 1.5em; margin: 5px 0;">↓</div>
-                            <div style="background: white; border: 2px solid #0366d6; border-radius: 8px; padding: 20px; margin: 5px; display: inline-block; min-width: 220px;">Recontextualización</div>
+                        <div style="text-align: center;">
+                            <div style="background: #f6f8fa; border-radius: 6px; padding: 12px; margin: 3px; font-size: 0.8em;">Contexto Original</div>
+                            <div style="font-size: 1.2em; margin: 3px 0;">↓</div>
+                            <div style="background: white; border: 2px solid #0366d6; border-radius: 6px; padding: 12px; margin: 3px; font-size: 0.8em;">Descontextualización</div>
+                            <div style="font-size: 1.2em; margin: 3px 0;">↓</div>
+                            <div style="background: #f6f8fa; border-radius: 6px; padding: 12px; margin: 3px; font-size: 0.8em;">Viaje/Curación</div>
+                            <div style="font-size: 1.2em; margin: 3px 0;">↓</div>
+                            <div style="background: white; border: 2px solid #0366d6; border-radius: 6px; padding: 12px; margin: 3px; font-size: 0.8em;">Recontextualización</div>
                         </div>
                     </div>
                 </div>
@@ -366,16 +401,16 @@
             <section>
                 <h2>Comprensión y Opacidad: Emily Sullivan</h2>
                 <div class="highlight-box">
-                    <h3>Tesis Central</h3>
-                    <p>La barrera para la comprensión en ML no es la opacidad interna, sino la <strong style="color: #dc3545;">falta de evidencia</strong> que conecte el modelo con el fenómeno.</p>
+                    <h3 style="font-size: 1.1em;">Tesis Central</h3>
+                    <p style="font-size: 0.9em;">La barrera para la comprensión en ML no es la opacidad interna, sino la <strong style="color: #dc3545;">falta de evidencia</strong> que conecte el modelo con el fenómeno.</p>
                 </div>
-                <div style="margin-top: 2em;">
+                <div style="margin-top: 1em;">
                     $$\text{Comprensión} = f(\text{Vínculo Modelo-Fenómeno})$$
                     $$\text{Riesgo Inductivo} \propto \text{Valores No-Epistémicos}$$
                 </div>
-                <div style="margin-top: 2em;">
+                <div style="margin-top: 1em;">
                     <h3>Implicaciones</h3>
-                    <ul>
+                    <ul style="font-size: 0.9em;">
                         <li>La opacidad tolerable depende del contexto de aplicación</li>
                         <li>Los valores éticos moldean los estándares de validación</li>
                     </ul>
@@ -398,68 +433,68 @@
                             <th>Etapa</th>
                             <th>Límite Humano</th>
                             <th>Solución IA</th>
-                            <th>Riesgo Epistémico</th>
+                            <th>Riesgo</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>Oráculo</strong></td>
-                            <td>Diseño del estudio</td>
-                            <td>Exceso de literatura</td>
-                            <td>Búsqueda y síntesis objetiva</td>
-                            <td>Alucinaciones, estrechamiento</td>
+                            <td>Diseño</td>
+                            <td>Exceso literatura</td>
+                            <td>Síntesis objetiva</td>
+                            <td>Alucinaciones</td>
                         </tr>
                         <tr>
                             <td><strong>Sustituto</strong></td>
-                            <td>Recopilación datos</td>
-                            <td>Datos costosos/difíciles</td>
-                            <td>Generación datos sintéticos</td>
-                            <td>Colapso del modelo</td>
+                            <td>Datos</td>
+                            <td>Datos costosos</td>
+                            <td>Datos sintéticos</td>
+                            <td>Colapso modelo</td>
                         </tr>
                         <tr>
                             <td><strong>Quant</strong></td>
                             <td>Análisis</td>
-                            <td>Datos complejos</td>
-                            <td>Análisis sobrehumano</td>
-                            <td>Falacia predicción-explicación</td>
+                            <td>Complejidad</td>
+                            <td>Análisis ML</td>
+                            <td>Falacia predictiva</td>
                         </tr>
                         <tr>
                             <td><strong>Árbitro</strong></td>
-                            <td>Revisión por pares</td>
+                            <td>Revisión</td>
                             <td>Volumen/sesgo</td>
-                            <td>Evaluación objetiva</td>
+                            <td>Evaluación auto</td>
                             <td>Automatizar sesgos</td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="warning-box" style="margin-top: 1em;">
-                    <p><strong>Riesgo crítico:</strong> Estas visiones forman un ecosistema autorreforzante que puede crear un "bloqueo sistémico"</p>
+                <div class="warning-box" style="margin-top: 0.8em;">
+                    <p style="font-size: 0.85em;"><strong>Riesgo crítico:</strong> Estas visiones forman un ecosistema autorreforzante que puede crear "bloqueo sistémico"</p>
                 </div>
             </section>
             
             <!-- El Bucle Autorreforzante -->
             <section>
                 <h2>El Bucle Autorreforzante de las Cuatro Visiones</h2>
-                <div style="text-align: center; margin: 2em 0;">
-                    <svg width="600" height="400" viewBox="0 0 600 400">
+                <div style="text-align: center; margin: 1em 0;">
+                    <svg width="500" height="300" viewBox="0 0 500 300">
                         <!-- Nodes -->
-                        <circle cx="300" cy="100" r="60" fill="#e1f5fe" stroke="#0366d6" stroke-width="3"/>
-                        <text x="300" y="105" text-anchor="middle" font-size="16" font-weight="bold">Oráculo</text>
+                        <circle cx="250" cy="60" r="45" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
+                        <text x="250" y="65" text-anchor="middle" font-size="14" font-weight="bold">Oráculo</text>
                         
-                        <circle cx="500" cy="200" r="60" fill="#f6f8fa" stroke="#0366d6" stroke-width="3"/>
-                        <text x="500" y="205" text-anchor="middle" font-size="16" font-weight="bold">Sustituto</text>
+                        <circle cx="400" cy="150" r="45" fill="#f6f8fa" stroke="#0366d6" stroke-width="2"/>
+                        <text x="400" y="155" text-anchor="middle" font-size="14" font-weight="bold">Sustituto</text>
                         
-                        <circle cx="300" cy="300" r="60" fill="#e1f5fe" stroke="#0366d6" stroke-width="3"/>
-                        <text x="300" y="305" text-anchor="middle" font-size="16" font-weight="bold">Quant</text>
+                        <circle cx="250" cy="240" r="45" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
+                        <text x="250" y="245" text-anchor="middle" font-size="14" font-weight="bold">Quant</text>
                         
-                        <circle cx="100" cy="200" r="60" fill="#f6f8fa" stroke="#0366d6" stroke-width="3"/>
-                        <text x="100" y="205" text-anchor="middle" font-size="16" font-weight="bold">Árbitro</text>
+                        <circle cx="100" cy="150" r="45" fill="#f6f8fa" stroke="#0366d6" stroke-width="2"/>
+                        <text x="100" y="155" text-anchor="middle" font-size="14" font-weight="bold">Árbitro</text>
                         
                         <!-- Arrows -->
-                        <path d="M 350 120 L 450 180" stroke="#0366d6" stroke-width="2" marker-end="url(#arrowhead)"/>
-                        <path d="M 480 250 L 350 280" stroke="#0366d6" stroke-width="2" marker-end="url(#arrowhead)"/>
-                        <path d="M 250 280 L 150 220" stroke="#0366d6" stroke-width="2" marker-end="url(#arrowhead)"/>
-                        <path d="M 120 150 L 250 120" stroke="#0366d6" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        <path d="M 290 85 L 360 125" stroke="#0366d6" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        <path d="M 375 190 L 290 215" stroke="#0366d6" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        <path d="M 210 215 L 140 175" stroke="#0366d6" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        <path d="M 125 110 L 210 85" stroke="#0366d6" stroke-width="2" marker-end="url(#arrowhead)"/>
                         
                         <!-- Arrow marker -->
                         <defs>
@@ -469,10 +504,10 @@
                         </defs>
                         
                         <!-- Center text -->
-                        <text x="300" y="210" text-anchor="middle" font-size="14" fill="#dc3545" font-weight="bold">Bucle Cerrado</text>
+                        <text x="250" y="160" text-anchor="middle" font-size="12" fill="#dc3545" font-weight="bold">Bucle Cerrado</text>
                     </svg>
                 </div>
-                <p class="center">Cada visión crea demanda para las otras → Integración en cascada</p>
+                <p class="center" style="font-size: 0.9em;">Cada visión crea demanda para las otras → Integración en cascada</p>
             </section>
             
             <!-- Section: Costo Cognitivo -->
@@ -483,11 +518,11 @@
             
             <!-- Confianza Epistémica -->
             <section>
-                <h2>Confianza Epistémica y Externalización Cognitiva</h2>
+                <h2>Confianza Epistémica y Externalización</h2>
                 <div class="two-column">
                     <div class="column">
-                        <h3>Factores que aumentan la confianza en IA:</h3>
-                        <ul>
+                        <h3>Factores que aumentan confianza:</h3>
+                        <ul style="font-size: 0.85em;">
                             <li>Tareas percibidas como objetivas</li>
                             <li>Requieren deliberación vs. intuición</li>
                             <li>Sesgos humanos indeseables</li>
@@ -495,10 +530,10 @@
                         </ul>
                     </div>
                     <div class="column">
-                        <div class="warning-box">
+                        <div class="warning-box" style="font-size: 0.85em;">
                             <h4>La Paradoja del Experto</h4>
-                            <p>La confianza en IA <strong>aumenta</strong> cuando los científicos operan fuera de su dominio de especialización</p>
-                            <p style="margin-top: 1em; font-size: 0.9em;">Ejemplo: Biólogo usando ML complejo sin base estadística = confianza ciega</p>
+                            <p>La confianza en IA <strong>aumenta</strong> cuando operamos fuera de nuestro dominio</p>
+                            <p style="margin-top: 0.5em; font-size: 0.9em;">Ej: Biólogo usando ML complejo = confianza ciega</p>
                         </div>
                     </div>
                 </div>
@@ -508,22 +543,22 @@
             <section class="scrollable">
                 <h2>Las Tres Ilusiones de Entendimiento</h2>
                 
-                <div class="highlight-box" style="background: #ffebee; border-left: 4px solid #dc3545;">
-                    <h3>1. Ilusión de Profundidad Explicativa</h3>
-                    <p>Confundir capacidad predictiva con comprensión causal</p>
-                    <p style="font-size: 0.9em; margin-top: 0.5em;"><strong>Ejemplo:</strong> Modelo que "predice" guerras civiles con 90% precisión por fuga de datos</p>
+                <div class="highlight-box" style="background: #ffebee; border-left: 4px solid #dc3545; margin: 10px 0;">
+                    <h3 style="font-size: 1em;">1. Ilusión de Profundidad Explicativa</h3>
+                    <p style="font-size: 0.85em;">Confundir capacidad predictiva con comprensión causal</p>
+                    <p style="font-size: 0.8em; margin-top: 0.3em;"><strong>Ejemplo:</strong> Modelo que "predice" guerras civiles con 90% precisión por fuga de datos</p>
                 </div>
                 
-                <div class="highlight-box" style="background: #fff3cd; border-left: 4px solid #ffc107; margin-top: 1em;">
-                    <h3>2. Ilusión de Amplitud Exploratoria</h3>
-                    <p>Creer que se explora todo el espacio de hipótesis cuando solo se examina lo computacionalmente manejable</p>
-                    <p style="font-size: 0.9em; margin-top: 0.5em;"><strong>Ejemplo:</strong> Abandono de métodos cualitativos por ser "no escalables"</p>
+                <div class="highlight-box" style="background: #fff3cd; border-left: 4px solid #ffc107; margin: 10px 0;">
+                    <h3 style="font-size: 1em;">2. Ilusión de Amplitud Exploratoria</h3>
+                    <p style="font-size: 0.85em;">Creer que exploramos todo cuando solo vemos lo computacionalmente manejable</p>
+                    <p style="font-size: 0.8em; margin-top: 0.3em;"><strong>Ejemplo:</strong> Abandono de métodos cualitativos por ser "no escalables"</p>
                 </div>
                 
-                <div class="highlight-box" style="background: #e1f5fe; border-left: 4px solid #0366d6; margin-top: 1em;">
-                    <h3>3. Ilusión de Objetividad</h3>
-                    <p>Creer que la IA opera desde una "perspectiva desde ninguna parte"</p>
-                    <p style="font-size: 0.9em; margin-top: 0.5em;"><strong>Ejemplo:</strong> IA de contratación que perpetúa sesgos existentes</p>
+                <div class="highlight-box" style="background: #e1f5fe; border-left: 4px solid #0366d6; margin: 10px 0;">
+                    <h3 style="font-size: 1em;">3. Ilusión de Objetividad</h3>
+                    <p style="font-size: 0.85em;">Creer que la IA opera desde una "perspectiva desde ninguna parte"</p>
+                    <p style="font-size: 0.8em; margin-top: 0.3em;"><strong>Ejemplo:</strong> IA de contratación que perpetúa sesgos existentes</p>
                 </div>
             </section>
             
@@ -539,19 +574,19 @@
                 <div class="two-column">
                     <div class="column">
                         <h3>La Tiranía de lo Cuantificable</h3>
-                        <ul>
-                            <li>IA transforma todo en "lenguaje interoperable de cuantificación"</li>
-                            <li>Margina enfoques cualitativos y contextuales</li>
-                            <li>68M papers analizados: IA reduce diversidad de preguntas</li>
+                        <ul style="font-size: 0.85em;">
+                            <li>IA transforma todo en cuantificación</li>
+                            <li>Margina enfoques cualitativos</li>
+                            <li>68M papers: IA reduce diversidad</li>
                         </ul>
                     </div>
                     <div class="column">
-                        <div class="highlight-box" style="background: #ffebee;">
+                        <div class="highlight-box" style="background: #ffebee; font-size: 0.85em;">
                             <h4>⚠️ Colapso del Modelo</h4>
-                            <p>Cuando IA entrena con resultados de otras IA:</p>
-                            <ul style="font-size: 0.9em;">
-                                <li>Ecosistema cerrado autorreferencial</li>
-                                <li>Amplificación de sesgos iniciales</li>
+                            <p style="font-size: 0.9em;">Cuando IA entrena con resultados de otras IA:</p>
+                            <ul style="font-size: 0.85em;">
+                                <li>Ecosistema autorreferencial</li>
+                                <li>Amplificación de sesgos</li>
                                 <li>"Olvido" de complejidad real</li>
                             </ul>
                         </div>
@@ -562,13 +597,13 @@
             <!-- Monoculturas de Conocedores -->
             <section>
                 <h2>Monoculturas de Conocedores</h2>
-                <blockquote>
-                    "La diversidad, tanto cognitiva como demográfica, no es solo una cuestión de equidad social; es una necesidad epistémica"
+                <blockquote style="font-size: 0.9em;">
+                    "La diversidad, tanto cognitiva como demográfica, no es solo equidad social; es una necesidad epistémica"
                 </blockquote>
-                <div class="two-column" style="margin-top: 2em;">
+                <div class="two-column" style="margin-top: 1em;">
                     <div class="column">
                         <h3>Objetividad Débil</h3>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>Confunde uniformidad con neutralidad</li>
                             <li>"Perspectiva desde ninguna parte"</li>
                             <li>Punto de vista único disfrazado</li>
@@ -576,14 +611,14 @@
                     </div>
                     <div class="column">
                         <h3>Objetividad Fuerte</h3>
-                        <ul>
-                            <li>Reconoce y abraza múltiples perspectivas</li>
-                            <li>Diversidad como fortaleza epistémica</li>
-                            <li>Equipos diversos = ciencia más robusta</li>
+                        <ul style="font-size: 0.85em;">
+                            <li>Abraza múltiples perspectivas</li>
+                            <li>Diversidad como fortaleza</li>
+                            <li>Equipos diversos = ciencia robusta</li>
                         </ul>
                     </div>
                 </div>
-                <p class="fragment center" style="margin-top: 1em; color: #dc3545; font-weight: bold;">
+                <p class="fragment center" style="margin-top: 0.8em; color: #dc3545; font-weight: bold; font-size: 0.9em;">
                     La IA amenaza con reintroducir la fantasía del conocedor universal
                 </p>
             </section>
@@ -597,19 +632,19 @@
             <!-- Bucle de Retroalimentación Tóxico -->
             <section>
                 <h2>El Bucle de Retroalimentación Tóxico</h2>
-                <div style="text-align: center; margin: 2em 0;">
-                    <svg width="600" height="300" viewBox="0 0 600 300">
+                <div style="text-align: center; margin: 1em 0;">
+                    <svg width="500" height="250" viewBox="0 0 500 250">
                         <!-- Cycle -->
-                        <ellipse cx="150" cy="150" rx="100" ry="60" fill="#ffebee" stroke="#dc3545" stroke-width="3"/>
-                        <text x="150" y="155" text-anchor="middle" font-size="16" font-weight="bold">Exageración</text>
+                        <ellipse cx="150" cy="125" rx="80" ry="50" fill="#ffebee" stroke="#dc3545" stroke-width="3"/>
+                        <text x="150" y="130" text-anchor="middle" font-size="14" font-weight="bold">Exageración</text>
                         
-                        <ellipse cx="450" cy="150" rx="100" ry="60" fill="#fff3cd" stroke="#ffc107" stroke-width="3"/>
-                        <text x="450" y="145" text-anchor="middle" font-size="16" font-weight="bold">Investigación</text>
-                        <text x="450" y="165" text-anchor="middle" font-size="16" font-weight="bold">Defectuosa</text>
+                        <ellipse cx="350" cy="125" rx="80" ry="50" fill="#fff3cd" stroke="#ffc107" stroke-width="3"/>
+                        <text x="350" y="120" text-anchor="middle" font-size="14" font-weight="bold">Investigación</text>
+                        <text x="350" y="135" text-anchor="middle" font-size="14" font-weight="bold">Defectuosa</text>
                         
                         <!-- Arrows -->
-                        <path d="M 250 120 Q 300 50 350 120" stroke="#dc3545" stroke-width="3" fill="none" marker-end="url(#arrow-red)"/>
-                        <path d="M 350 180 Q 300 250 250 180" stroke="#ffc107" stroke-width="3" fill="none" marker-end="url(#arrow-yellow)"/>
+                        <path d="M 230 95 Q 250 50 270 95" stroke="#dc3545" stroke-width="3" fill="none" marker-end="url(#arrow-red)"/>
+                        <path d="M 270 155 Q 250 200 230 155" stroke="#ffc107" stroke-width="3" fill="none" marker-end="url(#arrow-yellow)"/>
                         
                         <!-- Arrow markers -->
                         <defs>
@@ -622,30 +657,30 @@
                         </defs>
                     </svg>
                 </div>
-                <p class="center" style="font-weight: bold;">
-                    "Obtienes más subvenciones si tus resultados son 'revolucionarios' que si son 'interesantes'"
+                <p class="center" style="font-weight: bold; font-size: 0.9em;">
+                    "Obtienes más subvenciones si tus resultados son 'revolucionarios'"
                 </p>
             </section>
             
             <!-- Casos de Estudio de Ciencia Defectuosa -->
             <section>
-                <h2>Casos de Estudio: Cuando la Exageración Contamina</h2>
+                <h2>Casos de Estudio: Contaminación por Exageración</h2>
                 
-                <div class="warning-box" style="background: #ffebee; border-left: 4px solid #dc3545;">
-                    <h3>🧪 Ciencia de Materiales (Nature, 2023)</h3>
-                    <ul>
-                        <li>Afirmación: IA descubrió 2.2 millones de nuevos materiales</li>
-                        <li>Realidad: 41 materiales "validados" → mayoría mal identificados o ya conocidos</li>
+                <div class="warning-box" style="background: #ffebee; border-left: 4px solid #dc3545; margin: 10px 0;">
+                    <h3 style="font-size: 1em;">🧪 Ciencia de Materiales (Nature, 2023)</h3>
+                    <ul style="font-size: 0.85em;">
+                        <li>Afirmación: IA descubrió 2.2M nuevos materiales</li>
+                        <li>Realidad: 41 materiales "validados" → mayoría ya conocidos</li>
                         <li>Impacto: Contaminación del registro científico</li>
                     </ul>
                 </div>
                 
-                <div class="warning-box" style="margin-top: 1em;">
-                    <h3>🌍 Ciencia Política</h3>
-                    <ul>
+                <div class="warning-box" style="margin: 10px 0;">
+                    <h3 style="font-size: 1em;">🌍 Ciencia Política</h3>
+                    <ul style="font-size: 0.85em;">
                         <li>Afirmación: Predecir guerras civiles con >90% precisión</li>
                         <li>Realidad: Fuga de datos (data leakage) no detectada</li>
-                        <li>Lección: "Resultados facialmente imposibles" ignorados por exageración</li>
+                        <li>Lección: "Resultados imposibles" ignorados por exageración</li>
                     </ul>
                 </div>
             </section>
@@ -656,57 +691,57 @@
                 <div class="two-column">
                     <div class="column">
                         <h3>Capacidades Reales de Agentes IA:</h3>
-                        <ul>
-                            <li>✓ Tareas cortas (<4 horas): rendimiento humano o superior</li>
-                            <li>✗ Tareas largas (>8 horas): humanos duplican puntuación IA</li>
-                            <li>✗ Reproducibilidad computacional: problema no resuelto</li>
+                        <ul style="font-size: 0.85em;">
+                            <li>✓ Tareas cortas (<4h): rendimiento humano+</li>
+                            <li>✗ Tareas largas (>8h): humanos duplican IA</li>
+                            <li>✗ Reproducibilidad: problema no resuelto</li>
                         </ul>
                     </div>
                     <div class="column">
-                        <canvas id="costCurveChart" width="400" height="300"></canvas>
+                        <canvas id="costCurveChart" width="350" height="250"></canvas>
                     </div>
                 </div>
-                <p class="fragment center" style="margin-top: 1em;">
+                <p class="fragment center" style="margin-top: 0.5em; font-size: 0.85em;">
                     <strong>La pregunta clave:</strong> No "¿Puede la IA hacer X?" sino<br>
-                    "¿Cuál es el costo de que la IA haga X con 99.9% fiabilidad vs. un estudiante de posgrado?"
+                    "¿Cuál es el costo de que la IA haga X con 99.9% fiabilidad vs. un estudiante?"
                 </p>
             </section>
             
             <!-- Convergencia Teórica Ampliada -->
             <section>
                 <h2>Convergencia Teórica: El Espejo de la IA</h2>
-                <div style="text-align: center; margin: 2em 0;">
-                    <svg width="700" height="400" viewBox="0 0 700 400">
+                <div style="text-align: center; margin: 1em 0;">
+                    <svg width="600" height="320" viewBox="0 0 600 320">
                         <!-- Top layer: Theoretical foundations -->
-                        <ellipse cx="200" cy="100" rx="120" ry="60" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
-                        <text x="200" y="100" text-anchor="middle" font-size="14" font-weight="bold">Viaje de Datos<tspan x="200" dy="18">(Leonelli)</tspan></text>
+                        <ellipse cx="180" cy="80" rx="90" ry="45" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
+                        <text x="180" y="80" text-anchor="middle" font-size="12" font-weight="bold">Viaje de Datos<tspan x="180" dy="15">(Leonelli)</tspan></text>
                         
-                        <ellipse cx="500" cy="100" rx="120" ry="60" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
-                        <text x="500" y="100" text-anchor="middle" font-size="14" font-weight="bold">Vínculo Probatorio<tspan x="500" dy="18">(Sullivan)</tspan></text>
+                        <ellipse cx="420" cy="80" rx="90" ry="45" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
+                        <text x="420" y="80" text-anchor="middle" font-size="12" font-weight="bold">Vínculo Probatorio<tspan x="420" dy="15">(Sullivan)</tspan></text>
                         
                         <!-- Middle layer: Risks -->
-                        <ellipse cx="150" cy="220" rx="100" ry="50" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-                        <text x="150" y="220" text-anchor="middle" font-size="13">Ilusiones<tspan x="150" dy="16">Cognitivas</tspan></text>
+                        <ellipse cx="120" cy="180" rx="75" ry="40" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+                        <text x="120" y="180" text-anchor="middle" font-size="11">Ilusiones<tspan x="120" dy="13">Cognitivas</tspan></text>
                         
-                        <ellipse cx="350" cy="220" rx="100" ry="50" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-                        <text x="350" y="220" text-anchor="middle" font-size="13">Monoculturas<tspan x="350" dy="16">Epistémicas</tspan></text>
+                        <ellipse cx="300" cy="180" rx="75" ry="40" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+                        <text x="300" y="180" text-anchor="middle" font-size="11">Monoculturas<tspan x="300" dy="13">Epistémicas</tspan></text>
                         
-                        <ellipse cx="550" cy="220" rx="100" ry="50" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-                        <text x="550" y="220" text-anchor="middle" font-size="13">Exageración<tspan x="550" dy="16">Sistémica</tspan></text>
+                        <ellipse cx="480" cy="180" rx="75" ry="40" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+                        <text x="480" y="180" text-anchor="middle" font-size="11">Exageración<tspan x="480" dy="13">Sistémica</tspan></text>
                         
                         <!-- Bottom: Central insight -->
-                        <rect x="200" y="320" width="300" height="60" rx="10" fill="#f6f8fa" stroke="#0366d6" stroke-width="3"/>
-                        <text x="350" y="355" text-anchor="middle" font-size="16" font-weight="bold">La IA como Espejo</text>
+                        <rect x="175" y="260" width="250" height="45" rx="8" fill="#f6f8fa" stroke="#0366d6" stroke-width="3"/>
+                        <text x="300" y="288" text-anchor="middle" font-size="14" font-weight="bold">La IA como Espejo</text>
                         
                         <!-- Arrows -->
-                        <path d="M 200 160 L 200 170" stroke="#0366d6" stroke-width="2" marker-end="url(#arrowhead)"/>
-                        <path d="M 500 160 L 500 170" stroke="#0366d6" stroke-width="2" marker-end="url(#arrowhead)"/>
-                        <path d="M 150 270 L 250 320" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
-                        <path d="M 350 270 L 350 320" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
-                        <path d="M 550 270 L 450 320" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        <path d="M 180 125 L 180 140" stroke="#0366d6" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        <path d="M 420 125 L 420 140" stroke="#0366d6" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        <path d="M 120 220 L 200 260" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        <path d="M 300 220 L 300 260" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        <path d="M 480 220 L 400 260" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
                     </svg>
                 </div>
-                <p class="center">
+                <p class="center" style="font-size: 0.85em;">
                     <span class="badge">Insight</span> La IA amplifica las patologías preexistentes de la cultura científica
                 </p>
             </section>
@@ -714,23 +749,23 @@
             <!-- AI for Science: Agenda Emergente - Con Riesgos -->
             <section class="scrollable">
                 <h2>AI for Science: Entre la Promesa y el Peligro</h2>
-                <div class="highlight-box">
-                    <h3>Punto de Encuentro Interdisciplinario</h3>
-                    <p>La IA para la ciencia es un <strong>punto de encuentro</strong> que une experiencia en IA y dominios de aplicación</p>
+                <div class="highlight-box" style="padding: 10px;">
+                    <h3 style="font-size: 1em;">Punto de Encuentro Interdisciplinario</h3>
+                    <p style="font-size: 0.85em;">La IA para la ciencia une experiencia en IA y dominios de aplicación</p>
                 </div>
-                <div class="two-column" style="margin-top: 1em;">
+                <div class="two-column" style="margin-top: 0.5em;">
                     <div class="column">
                         <h3>✅ Promesas:</h3>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>Simulación híbrida</li>
                             <li>Inferencia causal mejorada</li>
                             <li>Conocimiento estructurado</li>
-                            <li>Aceleración 15× del descubrimiento</li>
+                            <li>Aceleración 15× descubrimiento</li>
                         </ul>
                     </div>
                     <div class="column">
                         <h3>⚠️ Peligros:</h3>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>Ilusiones de entendimiento</li>
                             <li>Monoculturas metodológicas</li>
                             <li>Amplificación de sesgos</li>
@@ -743,7 +778,7 @@
             <!-- Paradigmas Históricos con Crítica -->
             <section>
                 <h2>Paradigmas Científicos: ¿Evolución o Involución?</h2>
-                <table>
+                <table style="font-size: 0.75em;">
                     <thead>
                         <tr>
                             <th>Paradigma</th>
@@ -784,7 +819,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <p class="fragment center" style="margin-top: 1em; color: #dc3545;">
+                <p class="fragment center" style="margin-top: 0.5em; color: #dc3545; font-size: 0.85em;">
                     <strong>Pregunta crítica:</strong> ¿Es progreso una ciencia que produce más pero entiende menos?
                 </p>
             </section>
@@ -795,21 +830,21 @@
                 <div class="two-column">
                     <div class="column">
                         <h3>🌟 Éxitos:</h3>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>AlphaFold: 200M+ estructuras</li>
                             <li>Diseño de fármacos con IA</li>
-                            <li>Detección de ondas gravitacionales</li>
+                            <li>Detección ondas gravitacionales</li>
                         </ul>
                         
-                        <h3 style="margin-top: 2em;">⚠️ Fracasos:</h3>
-                        <ul>
+                        <h3 style="margin-top: 1em;">⚠️ Fracasos:</h3>
+                        <ul style="font-size: 0.85em;">
                             <li>90% fármacos IA fallan en ensayos</li>
                             <li>Sesgo en algoritmos médicos</li>
                             <li>70% estudios ML no reproducibles</li>
                         </ul>
                     </div>
                     <div class="column">
-                        <canvas id="accelerationChart" width="400" height="300"></canvas>
+                        <canvas id="accelerationChart" width="350" height="250"></canvas>
                     </div>
                 </div>
             </section>
@@ -822,11 +857,11 @@
             
             <!-- De Oráculo a Herramienta -->
             <section>
-                <h2>De Oráculo a Herramienta: Un Cambio de Mentalidad</h2>
+                <h2>De Oráculo a Herramienta: Cambio de Mentalidad</h2>
                 <div class="two-column">
                     <div class="column">
                         <h3>❌ IA como Oráculo:</h3>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>Infalible y objetiva</li>
                             <li>Reemplaza juicio humano</li>
                             <li>Caja negra confiable</li>
@@ -835,7 +870,7 @@
                     </div>
                     <div class="column">
                         <h3>✅ IA como Herramienta:</h3>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>Falible y sesgada</li>
                             <li>Aumenta capacidad humana</li>
                             <li>Requiere supervisión experta</li>
@@ -843,18 +878,18 @@
                         </ul>
                     </div>
                 </div>
-                <div class="highlight-box" style="margin-top: 2em;">
-                    <p class="center"><strong>Principio clave:</strong> Mantener la experiencia humana para validar el trabajo de la IA</p>
+                <div class="highlight-box" style="margin-top: 1em; padding: 10px;">
+                    <p class="center" style="font-size: 0.85em;"><strong>Principio clave:</strong> Mantener la experiencia humana para validar el trabajo de la IA</p>
                 </div>
             </section>
             
             <!-- Mitigando Monoculturas -->
             <section>
                 <h2>Estrategias para Mitigar Monoculturas</h2>
-                <ol>
+                <ol style="font-size: 0.9em;">
                     <li class="fragment">
                         <strong>Fomentar equipos diversos:</strong>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>Diversidad cognitiva y demográfica</li>
                             <li>Múltiples perspectivas disciplinarias</li>
                             <li>Resistir IA como reemplazo de colaboradores</li>
@@ -862,7 +897,7 @@
                     </li>
                     <li class="fragment">
                         <strong>Proteger diversidad metodológica:</strong>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>Valorar enfoques cualitativos</li>
                             <li>Incentivar paradigmas no computacionales</li>
                             <li>Financiación para métodos alternativos</li>
@@ -870,7 +905,7 @@
                     </li>
                     <li class="fragment">
                         <strong>Estándares de rigor (REFORMS):</strong>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>Transparencia en datos y modelos</li>
                             <li>Prevención de fuga de datos</li>
                             <li>Revisión por pares especializada</li>
@@ -882,13 +917,13 @@
             <!-- Ciencia Lenta -->
             <section>
                 <h2>El Argumento para la "Ciencia Lenta"</h2>
-                <blockquote style="font-size: 1.1em;">
-                    "La crisis de la IA presenta una oportunidad para una profunda autorreflexión: ¿es esta hiperproductividad realmente deseable?"
+                <blockquote style="font-size: 0.9em;">
+                    "La crisis de la IA presenta una oportunidad para reflexión profunda: ¿es la hiperproductividad realmente deseable?"
                 </blockquote>
-                <div class="two-column" style="margin-top: 2em;">
+                <div class="two-column" style="margin-top: 1em;">
                     <div class="column">
                         <h3>Ciencia Rápida:</h3>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>Métricas de publicación</li>
                             <li>Cantidad sobre calidad</li>
                             <li>Competencia feroz</li>
@@ -897,7 +932,7 @@
                     </div>
                     <div class="column">
                         <h3>Ciencia Lenta:</h3>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>Comprensión profunda</li>
                             <li>Calidad y rigor</li>
                             <li>Colaboración reflexiva</li>
@@ -905,7 +940,7 @@
                         </ul>
                     </div>
                 </div>
-                <p class="fragment center" style="margin-top: 1em; font-weight: bold;">
+                <p class="fragment center" style="margin-top: 0.5em; font-weight: bold; font-size: 0.85em;">
                     La IA como espejo nos obliga a confrontar las patologías de nuestra cultura científica
                 </p>
             </section>
@@ -918,41 +953,41 @@
             
             <!-- Pipeline con Puntos de Falla -->
             <section>
-                <h2>Pipeline de Investigación Automatizada: Puntos de Falla</h2>
-                <div style="text-align: center; margin: 2em 0;">
-                    <svg width="700" height="350" viewBox="0 0 700 350">
+                <h2>Pipeline de Investigación: Puntos de Falla</h2>
+                <div style="text-align: center; margin: 1em 0;">
+                    <svg width="600" height="300" viewBox="0 0 600 300">
                         <!-- Nodes -->
-                        <rect x="20" y="50" width="100" height="60" rx="10" fill="#f6f8fa" stroke="#0366d6" stroke-width="2"/>
-                        <text x="70" y="85" text-anchor="middle" font-size="14">Big Data</text>
+                        <rect x="20" y="50" width="80" height="50" rx="8" fill="#f6f8fa" stroke="#0366d6" stroke-width="2"/>
+                        <text x="60" y="80" text-anchor="middle" font-size="12">Big Data</text>
                         
-                        <rect x="170" y="50" width="100" height="60" rx="10" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
-                        <text x="220" y="85" text-anchor="middle" font-size="14">Curación</text>
+                        <rect x="140" y="50" width="80" height="50" rx="8" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
+                        <text x="180" y="80" text-anchor="middle" font-size="12">Curación</text>
                         
-                        <rect x="320" y="50" width="100" height="60" rx="10" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
-                        <text x="370" y="85" text-anchor="middle" font-size="14">ML/AI</text>
+                        <rect x="260" y="50" width="80" height="50" rx="8" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
+                        <text x="300" y="80" text-anchor="middle" font-size="12">ML/AI</text>
                         
-                        <rect x="470" y="50" width="100" height="60" rx="10" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
-                        <text x="520" y="85" text-anchor="middle" font-size="14">Hipótesis</text>
+                        <rect x="380" y="50" width="80" height="50" rx="8" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
+                        <text x="420" y="80" text-anchor="middle" font-size="12">Hipótesis</text>
                         
-                        <rect x="320" y="200" width="100" height="60" rx="10" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
-                        <text x="370" y="235" text-anchor="middle" font-size="14">Experimento</text>
+                        <rect x="260" y="180" width="80" height="50" rx="8" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
+                        <text x="300" y="210" text-anchor="middle" font-size="12">Experimento</text>
                         
-                        <rect x="170" y="200" width="100" height="60" rx="10" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
-                        <text x="220" y="235" text-anchor="middle" font-size="14">Validación</text>
+                        <rect x="140" y="180" width="80" height="50" rx="8" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
+                        <text x="180" y="210" text-anchor="middle" font-size="12">Validación</text>
                         
                         <!-- Failure points -->
-                        <text x="145" y="35" text-anchor="middle" font-size="12" fill="#dc3545" font-weight="bold">Sesgo</text>
-                        <text x="295" y="35" text-anchor="middle" font-size="12" fill="#dc3545" font-weight="bold">Fuga datos</text>
-                        <text x="445" y="35" text-anchor="middle" font-size="12" fill="#dc3545" font-weight="bold">Ilusiones</text>
-                        <text x="395" y="285" text-anchor="middle" font-size="12" fill="#dc3545" font-weight="bold">Colapso modelo</text>
+                        <text x="120" y="35" text-anchor="middle" font-size="10" fill="#dc3545" font-weight="bold">Sesgo</text>
+                        <text x="240" y="35" text-anchor="middle" font-size="10" fill="#dc3545" font-weight="bold">Fuga datos</text>
+                        <text x="360" y="35" text-anchor="middle" font-size="10" fill="#dc3545" font-weight="bold">Ilusiones</text>
+                        <text x="320" y="250" text-anchor="middle" font-size="10" fill="#dc3545" font-weight="bold">Colapso modelo</text>
                         
                         <!-- Arrows -->
-                        <path d="M 120 80 L 170 80" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow)"/>
-                        <path d="M 270 80 L 320 80" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow)"/>
-                        <path d="M 420 80 L 470 80" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow)"/>
-                        <path d="M 520 110 L 520 200 L 420 200" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow)"/>
-                        <path d="M 320 230 L 270 230" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow)"/>
-                        <path d="M 170 230 L 70 230 L 70 110" stroke="#dc3545" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
+                        <path d="M 100 75 L 140 75" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow)"/>
+                        <path d="M 220 75 L 260 75" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow)"/>
+                        <path d="M 340 75 L 380 75" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow)"/>
+                        <path d="M 420 100 L 420 180 L 340 180" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow)"/>
+                        <path d="M 260 205 L 220 205" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow)"/>
+                        <path d="M 140 205 L 60 205 L 60 100" stroke="#dc3545" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
                         
                         <!-- Arrow markers -->
                         <defs>
@@ -970,18 +1005,18 @@
             <!-- Protocolo de Validación Ampliado -->
             <section>
                 <h2>Protocolo de Validación Integral</h2>
-                <div class="highlight-box">
-                    <h3>Validación en Cuatro Niveles</h3>
-                    <ol>
+                <div class="highlight-box" style="padding: 12px;">
+                    <h3 style="font-size: 1em;">Validación en Cuatro Niveles</h3>
+                    <ol style="font-size: 0.85em;">
                         <li><strong>Técnica:</strong> Métricas de ML (accuracy, F1, AUC)</li>
                         <li><strong>Científica:</strong> Reproducibilidad, generalización</li>
                         <li><strong>Ética:</strong> Sesgo, equidad, transparencia</li>
                         <li><strong>Epistémica:</strong> Comprensión real vs. correlación superficial</li>
                     </ol>
                 </div>
-                <div style="margin-top: 2em; text-align: center;">
+                <div style="margin-top: 0.8em; text-align: center;">
                     $$\text{Confiabilidad} = \alpha \cdot \text{Precisión} + \beta \cdot \text{Reproducibilidad} + \gamma \cdot \text{Equidad} + \delta \cdot \text{Comprensión}$$
-                    <p>donde $\alpha + \beta + \gamma + \delta = 1$ y dependen del dominio y riesgo</p>
+                    <p style="font-size: 0.8em;">donde $\alpha + \beta + \gamma + \delta = 1$ y dependen del dominio y riesgo</p>
                 </div>
             </section>
             
@@ -997,22 +1032,22 @@
                 <div class="two-column">
                     <div class="column">
                         <h3>✅ Impacto Positivo:</h3>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>200+ millones de estructuras</li>
                             <li>Precisión: 92.4 GDT</li>
                             <li>Nobel 2024</li>
                             <li>Democratización global</li>
                         </ul>
                         
-                        <h3 style="margin-top: 1em;">⚠️ Limitaciones:</h3>
-                        <ul>
+                        <h3 style="margin-top: 0.8em;">⚠️ Limitaciones:</h3>
+                        <ul style="font-size: 0.85em;">
                             <li>No explica mecanismos de plegado</li>
                             <li>Fallos en proteínas desordenadas</li>
                             <li>Riesgo de sobre-confianza</li>
                         </ul>
                     </div>
                     <div class="column">
-                        <img src='img/molecule_structure.svg' alt='Estructura molecular clara' style='max-width: 100%; max-height: 50vh; height: auto;'>
+                        <img src='img/molecule_structure.svg' alt='Estructura molecular' style='max-width: 100%; max-height: 35vh;'>
                     </div>
                 </div>
             </section>
@@ -1020,8 +1055,8 @@
             <!-- Matriz de Riesgos Actualizada -->
             <section>
                 <h2>Matriz de Riesgos por Dominio y Visión</h2>
-                <canvas id="riskMatrix" width="700" height="400"></canvas>
-                <p class="center" style="margin-top: 1em;">
+                <canvas id="riskMatrix" width="600" height="320"></canvas>
+                <p class="center" style="margin-top: 0.5em; font-size: 0.8em;">
                     <small>Escala: 1 (bajo) – 10 (crítico) | Rojo = Mayor riesgo epistémico</small>
                 </p>
             </section>
@@ -1035,44 +1070,44 @@
             <!-- Crisis de Reproducibilidad Ampliada -->
             <section>
                 <h2>La Crisis de Reproducibilidad se Profundiza</h2>
-                <div style="text-align: center; margin: 2em 0;">
-                    <svg width="700" height="400" viewBox="0 0 700 400">
+                <div style="text-align: center; margin: 0.5em 0;">
+                    <svg width="600" height="320" viewBox="0 0 600 320">
                         <!-- Traditional issues -->
-                        <text x="350" y="30" text-anchor="middle" font-size="18" font-weight="bold">Problemas Tradicionales</text>
+                        <text x="300" y="25" text-anchor="middle" font-size="15" font-weight="bold">Problemas Tradicionales</text>
                         
-                        <rect x="50" y="50" width="180" height="50" rx="10" fill="#ffebee" stroke="#dc3545" stroke-width="2"/>
-                        <text x="140" y="80" text-anchor="middle" font-size="14">Datos no disponibles</text>
+                        <rect x="40" y="40" width="160" height="40" rx="8" fill="#ffebee" stroke="#dc3545" stroke-width="2"/>
+                        <text x="120" y="65" text-anchor="middle" font-size="12">Datos no disponibles</text>
                         
-                        <rect x="260" y="50" width="180" height="50" rx="10" fill="#ffebee" stroke="#dc3545" stroke-width="2"/>
-                        <text x="350" y="80" text-anchor="middle" font-size="14">Código incompleto</text>
+                        <rect x="220" y="40" width="160" height="40" rx="8" fill="#ffebee" stroke="#dc3545" stroke-width="2"/>
+                        <text x="300" y="65" text-anchor="middle" font-size="12">Código incompleto</text>
                         
-                        <rect x="470" y="50" width="180" height="50" rx="10" fill="#ffebee" stroke="#dc3545" stroke-width="2"/>
-                        <text x="560" y="80" text-anchor="middle" font-size="14">Hiperparámetros ocultos</text>
+                        <rect x="400" y="40" width="160" height="40" rx="8" fill="#ffebee" stroke="#dc3545" stroke-width="2"/>
+                        <text x="480" y="65" text-anchor="middle" font-size="12">Hiperparámetros ocultos</text>
                         
                         <!-- AI-specific issues -->
-                        <text x="350" y="150" text-anchor="middle" font-size="18" font-weight="bold">+ Nuevos Problemas con IA</text>
+                        <text x="300" y="120" text-anchor="middle" font-size="15" font-weight="bold">+ Nuevos Problemas con IA</text>
                         
-                        <rect x="50" y="170" width="180" height="50" rx="10" fill="#ff8a80" stroke="#dc3545" stroke-width="3"/>
-                        <text x="140" y="200" text-anchor="middle" font-size="14">Fuga de datos</text>
+                        <rect x="40" y="140" width="160" height="40" rx="8" fill="#ff8a80" stroke="#dc3545" stroke-width="3"/>
+                        <text x="120" y="165" text-anchor="middle" font-size="12">Fuga de datos</text>
                         
-                        <rect x="260" y="170" width="180" height="50" rx="10" fill="#ff8a80" stroke="#dc3545" stroke-width="3"/>
-                        <text x="350" y="200" text-anchor="middle" font-size="14">Modelos no interpretables</text>
+                        <rect x="220" y="140" width="160" height="40" rx="8" fill="#ff8a80" stroke="#dc3545" stroke-width="3"/>
+                        <text x="300" y="165" text-anchor="middle" font-size="12">Modelos no interpretables</text>
                         
-                        <rect x="470" y="170" width="180" height="50" rx="10" fill="#ff8a80" stroke="#dc3545" stroke-width="3"/>
-                        <text x="560" y="200" text-anchor="middle" font-size="14">Colapso recursivo</text>
+                        <rect x="400" y="140" width="160" height="40" rx="8" fill="#ff8a80" stroke="#dc3545" stroke-width="3"/>
+                        <text x="480" y="165" text-anchor="middle" font-size="12">Colapso recursivo</text>
                         
                         <!-- Result -->
-                        <rect x="200" y="280" width="300" height="80" rx="10" fill="#ffcdd2" stroke="#dc3545" stroke-width="4"/>
-                        <text x="350" y="315" text-anchor="middle" font-size="20" font-weight="bold">Crisis Amplificada</text>
-                        <text x="350" y="340" text-anchor="middle" font-size="16">70% → 90% irreproducible</text>
+                        <rect x="175" y="220" width="250" height="65" rx="8" fill="#ffcdd2" stroke="#dc3545" stroke-width="4"/>
+                        <text x="300" y="248" text-anchor="middle" font-size="16" font-weight="bold">Crisis Amplificada</text>
+                        <text x="300" y="268" text-anchor="middle" font-size="14">70% → 90% irreproducible</text>
                         
                         <!-- Arrows -->
-                        <path d="M 140 100 L 300 280" stroke="#dc3545" stroke-width="2" marker-end="url(#redarrow)"/>
-                        <path d="M 350 100 L 350 280" stroke="#dc3545" stroke-width="2" marker-end="url(#redarrow)"/>
-                        <path d="M 560 100 L 400 280" stroke="#dc3545" stroke-width="2" marker-end="url(#redarrow)"/>
-                        <path d="M 140 220 L 300 280" stroke="#dc3545" stroke-width="3" marker-end="url(#redarrow)"/>
-                        <path d="M 350 220 L 350 280" stroke="#dc3545" stroke-width="3" marker-end="url(#redarrow)"/>
-                        <path d="M 560 220 L 400 280" stroke="#dc3545" stroke-width="3" marker-end="url(#redarrow)"/>
+                        <path d="M 120 80 L 250 220" stroke="#dc3545" stroke-width="2" marker-end="url(#redarrow)"/>
+                        <path d="M 300 80 L 300 220" stroke="#dc3545" stroke-width="2" marker-end="url(#redarrow)"/>
+                        <path d="M 480 80 L 350 220" stroke="#dc3545" stroke-width="2" marker-end="url(#redarrow)"/>
+                        <path d="M 120 180 L 250 220" stroke="#dc3545" stroke-width="3" marker-end="url(#redarrow)"/>
+                        <path d="M 300 180 L 300 220" stroke="#dc3545" stroke-width="3" marker-end="url(#redarrow)"/>
+                        <path d="M 480 180 L 350 220" stroke="#dc3545" stroke-width="3" marker-end="url(#redarrow)"/>
                         
                         <!-- Arrow marker -->
                         <defs>
@@ -1096,15 +1131,15 @@
                 <div class="two-column">
                     <div class="column">
                         <h3>Antes:</h3>
-                        <ul>
+                        <ul style="font-size: 0.85em;">
                             <li>Ejecutor manual</li>
                             <li>Análisis individual</li>
                             <li>Publicación lineal</li>
                             <li>Experto especializado</li>
                         </ul>
                         
-                        <h3 style="margin-top: 2em;">Ahora:</h3>
-                        <ul>
+                        <h3 style="margin-top: 1em;">Ahora:</h3>
+                        <ul style="font-size: 0.85em;">
                             <li>Director estratégico</li>
                             <li>Curador epistémico</li>
                             <li>Validador crítico</li>
@@ -1112,33 +1147,33 @@
                         </ul>
                     </div>
                     <div class="column" style="text-align: center;">
-                        <svg width="300" height="300" viewBox="0 0 300 300">
+                        <svg width="280" height="280" viewBox="0 0 280 280">
                             <!-- Central scientist -->
-                            <circle cx="150" cy="150" r="40" fill="#0366d6"/>
-                            <text x="150" y="160" text-anchor="middle" font-size="24" fill="white">👤</text>
+                            <circle cx="140" cy="140" r="35" fill="#0366d6"/>
+                            <text x="140" y="148" text-anchor="middle" font-size="20" fill="white">👤</text>
                             
                             <!-- Surrounding elements with labels -->
-                            <rect x="220" y="50" width="70" height="40" rx="5" fill="#f6f8fa" stroke="#0366d6" stroke-width="2"/>
-                            <text x="255" y="75" text-anchor="middle" font-size="12">IA/ML</text>
+                            <rect x="200" y="50" width="60" height="35" rx="5" fill="#f6f8fa" stroke="#0366d6" stroke-width="2"/>
+                            <text x="230" y="72" text-anchor="middle" font-size="11">IA/ML</text>
                             
-                            <rect x="220" y="210" width="70" height="40" rx="5" fill="#f6f8fa" stroke="#0366d6" stroke-width="2"/>
-                            <text x="255" y="235" text-anchor="middle" font-size="12">Robots</text>
+                            <rect x="200" y="195" width="60" height="35" rx="5" fill="#f6f8fa" stroke="#0366d6" stroke-width="2"/>
+                            <text x="230" y="217" text-anchor="middle" font-size="11">Robots</text>
                             
-                            <rect x="10" y="50" width="70" height="40" rx="5" fill="#f6f8fa" stroke="#0366d6" stroke-width="2"/>
-                            <text x="45" y="75" text-anchor="middle" font-size="12">Big Data</text>
+                            <rect x="20" y="50" width="60" height="35" rx="5" fill="#f6f8fa" stroke="#0366d6" stroke-width="2"/>
+                            <text x="50" y="72" text-anchor="middle" font-size="11">Big Data</text>
                             
-                            <rect x="10" y="210" width="70" height="40" rx="5" fill="#f6f8fa" stroke="#0366d6" stroke-width="2"/>
-                            <text x="45" y="235" text-anchor="middle" font-size="12">Ética</text>
+                            <rect x="20" y="195" width="60" height="35" rx="5" fill="#f6f8fa" stroke="#0366d6" stroke-width="2"/>
+                            <text x="50" y="217" text-anchor="middle" font-size="11">Ética</text>
                             
-                            <rect x="115" y="10" width="70" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-                            <text x="150" y="35" text-anchor="middle" font-size="12">Sentido</text>
+                            <rect x="105" y="20" width="70" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+                            <text x="140" y="42" text-anchor="middle" font-size="11">Sentido</text>
                             
                             <!-- Connections -->
-                            <line x1="180" y1="130" x2="220" y2="90" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow2)"/>
-                            <line x1="180" y1="170" x2="220" y2="210" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow2)"/>
-                            <line x1="120" y1="130" x2="80" y2="90" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow2)"/>
-                            <line x1="120" y1="170" x2="80" y2="210" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow2)"/>
-                            <line x1="150" y1="110" x2="150" y2="50" stroke="#ffc107" stroke-width="3" marker-end="url(#arrow-yellow2)"/>
+                            <line x1="165" y1="120" x2="200" y2="85" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow2)"/>
+                            <line x1="165" y1="160" x2="200" y2="195" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow2)"/>
+                            <line x1="115" y1="120" x2="80" y2="85" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow2)"/>
+                            <line x1="115" y1="160" x2="80" y2="195" stroke="#0366d6" stroke-width="2" marker-end="url(#arrow2)"/>
+                            <line x1="140" y1="105" x2="140" y2="55" stroke="#ffc107" stroke-width="3" marker-end="url(#arrow-yellow2)"/>
                             
                             <!-- Arrow markers -->
                             <defs>
@@ -1152,7 +1187,7 @@
                         </svg>
                     </div>
                 </div>
-                <p class="fragment center" style="margin-top: 1em;">
+                <p class="fragment center" style="margin-top: 0.5em; font-size: 0.85em;">
                     <span class="badge yellow">Clave</span> El humano debe mantener el control del <strong>sentido</strong> y la <strong>dirección</strong>
                 </p>
             </section>
@@ -1160,52 +1195,52 @@
             <!-- Trabajo Futuro Ampliado -->
             <section>
                 <h2>Hoja de Ruta: Hacia una IA Científica Responsable</h2>
-                <div style="text-align: center; margin: 2em 0;">
-                    <svg width="700" height="250" viewBox="0 0 700 250">
+                <div style="text-align: center; margin: 0.5em 0;">
+                    <svg width="600" height="200" viewBox="0 0 600 200">
                         <!-- Timeline -->
-                        <line x1="50" y1="200" x2="650" y2="200" stroke="#222" stroke-width="2" marker-end="url(#arrow3)"/>
+                        <line x1="50" y1="160" x2="550" y2="160" stroke="#222" stroke-width="2" marker-end="url(#arrow3)"/>
                         
                         <!-- Year markers -->
-                        <line x1="150" y1="190" x2="150" y2="210" stroke="#222" stroke-width="2"/>
-                        <text x="150" y="230" text-anchor="middle" font-size="12">2026</text>
+                        <line x1="130" y1="150" x2="130" y2="170" stroke="#222" stroke-width="2"/>
+                        <text x="130" y="185" text-anchor="middle" font-size="10">2026</text>
                         
-                        <line x1="250" y1="190" x2="250" y2="210" stroke="#222" stroke-width="2"/>
-                        <text x="250" y="230" text-anchor="middle" font-size="12">2027</text>
+                        <line x1="220" y1="150" x2="220" y2="170" stroke="#222" stroke-width="2"/>
+                        <text x="220" y="185" text-anchor="middle" font-size="10">2027</text>
                         
-                        <line x1="350" y1="190" x2="350" y2="210" stroke="#222" stroke-width="2"/>
-                        <text x="350" y="230" text-anchor="middle" font-size="12">2028</text>
+                        <line x1="310" y1="150" x2="310" y2="170" stroke="#222" stroke-width="2"/>
+                        <text x="310" y="185" text-anchor="middle" font-size="10">2028</text>
                         
-                        <line x1="450" y1="190" x2="450" y2="210" stroke="#222" stroke-width="2"/>
-                        <text x="450" y="230" text-anchor="middle" font-size="12">2029</text>
+                        <line x1="400" y1="150" x2="400" y2="170" stroke="#222" stroke-width="2"/>
+                        <text x="400" y="185" text-anchor="middle" font-size="10">2029</text>
                         
-                        <line x1="550" y1="190" x2="550" y2="210" stroke="#222" stroke-width="2"/>
-                        <text x="550" y="230" text-anchor="middle" font-size="12">2030</text>
+                        <line x1="490" y1="150" x2="490" y2="170" stroke="#222" stroke-width="2"/>
+                        <text x="490" y="185" text-anchor="middle" font-size="10">2030</text>
                         
                         <!-- Milestones -->
-                        <rect x="100" y="100" width="100" height="60" rx="10" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
-                        <text x="150" y="120" text-anchor="middle" font-size="11">REFORMS</text>
-                        <text x="150" y="135" text-anchor="middle" font-size="11">Standards</text>
-                        <text x="150" y="150" text-anchor="middle" font-size="11">Adoption</text>
+                        <rect x="80" y="80" width="80" height="50" rx="8" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
+                        <text x="120" y="98" text-anchor="middle" font-size="9">REFORMS</text>
+                        <text x="120" y="110" text-anchor="middle" font-size="9">Standards</text>
+                        <text x="120" y="122" text-anchor="middle" font-size="9">Adoption</text>
                         
-                        <rect x="200" y="50" width="100" height="60" rx="10" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-                        <text x="250" y="70" text-anchor="middle" font-size="11">Educación</text>
-                        <text x="250" y="85" text-anchor="middle" font-size="11">Crítica</text>
-                        <text x="250" y="100" text-anchor="middle" font-size="11">en IA</text>
+                        <rect x="170" y="40" width="80" height="50" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+                        <text x="210" y="58" text-anchor="middle" font-size="9">Educación</text>
+                        <text x="210" y="70" text-anchor="middle" font-size="9">Crítica</text>
+                        <text x="210" y="82" text-anchor="middle" font-size="9">en IA</text>
                         
-                        <rect x="300" y="100" width="100" height="60" rx="10" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
-                        <text x="350" y="120" text-anchor="middle" font-size="11">Métricas</text>
-                        <text x="350" y="135" text-anchor="middle" font-size="11">Comprensión</text>
-                        <text x="350" y="150" text-anchor="middle" font-size="11">vs Predicción</text>
+                        <rect x="260" y="80" width="80" height="50" rx="8" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
+                        <text x="300" y="98" text-anchor="middle" font-size="9">Métricas</text>
+                        <text x="300" y="110" text-anchor="middle" font-size="9">Comprensión</text>
+                        <text x="300" y="122" text-anchor="middle" font-size="9">vs Predicción</text>
                         
-                        <rect x="400" y="50" width="100" height="60" rx="10" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-                        <text x="450" y="70" text-anchor="middle" font-size="11">Fondos para</text>
-                        <text x="450" y="85" text-anchor="middle" font-size="11">Diversidad</text>
-                        <text x="450" y="100" text-anchor="middle" font-size="11">Metodológica</text>
+                        <rect x="350" y="40" width="80" height="50" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+                        <text x="390" y="58" text-anchor="middle" font-size="9">Fondos para</text>
+                        <text x="390" y="70" text-anchor="middle" font-size="9">Diversidad</text>
+                        <text x="390" y="82" text-anchor="middle" font-size="9">Metodológica</text>
                         
-                        <rect x="500" y="100" width="100" height="60" rx="10" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
-                        <text x="550" y="120" text-anchor="middle" font-size="11">Cultura</text>
-                        <text x="550" y="135" text-anchor="middle" font-size="11">Ciencia</text>
-                        <text x="550" y="150" text-anchor="middle" font-size="11">Lenta</text>
+                        <rect x="440" y="80" width="80" height="50" rx="8" fill="#e1f5fe" stroke="#0366d6" stroke-width="2"/>
+                        <text x="480" y="98" text-anchor="middle" font-size="9">Cultura</text>
+                        <text x="480" y="110" text-anchor="middle" font-size="9">Ciencia</text>
+                        <text x="480" y="122" text-anchor="middle" font-size="9">Lenta</text>
                         
                         <!-- Arrow marker -->
                         <defs>
@@ -1221,20 +1256,20 @@
             <section>
                 <h2>Mensajes Clave: La Espada de Doble Filo</h2>
                 <div class="center">
-                    <div class='key-message-box'>
-                        <p style="font-size: 1.3em; margin: 15px 0;">
+                    <div class='key-message-box' style="padding: 12px;">
+                        <p style="font-size: 1.1em; margin: 10px 0;">
                             🗡️ <strong>La IA amplifica tanto virtudes como vicios de la ciencia</strong>
                         </p>
-                        <p style="font-size: 1.3em; margin: 15px 0;">
+                        <p style="font-size: 1.1em; margin: 10px 0;">
                             💡 <strong>La teoría se transforma, no desaparece</strong>
                         </p>
-                        <p style="font-size: 1.3em; margin: 15px 0;">
+                        <p style="font-size: 1.1em; margin: 10px 0;">
                             👥 <strong>La diversidad epistémica es nuestra mejor defensa</strong>
                         </p>
-                        <p style="font-size: 1.3em; margin: 15px 0;">
+                        <p style="font-size: 1.1em; margin: 10px 0;">
                             🎯 <strong>De oráculo a herramienta: mantener el control humano</strong>
                         </p>
-                        <p style="font-size: 1.3em; margin: 15px 0;">
+                        <p style="font-size: 1.1em; margin: 10px 0;">
                             🐌 <strong>Ciencia lenta: calidad sobre cantidad</strong>
                         </p>
                     </div>
@@ -1247,11 +1282,11 @@
             
             <!-- La Pregunta Final -->
             <section data-background="#222" data-background-transition="zoom">
-                <h1 style="color: white; text-align: center; font-size: 3em;">La Pregunta Fundamental</h1>
-                <blockquote style="color: white; font-size: 1.8em; text-align: center; margin-top: 2em; border-left-color: white;">
+                <h1 style="color: white; text-align: center; font-size: 2.5em;">La Pregunta Fundamental</h1>
+                <blockquote style="color: white; font-size: 1.5em; text-align: center; margin-top: 1.5em; border-left-color: white;">
                     "¿Es progreso una ciencia que produce más pero entiende menos?"
                 </blockquote>
-                <p style="color: white; text-align: center; font-size: 1.2em; margin-top: 2em;">
+                <p style="color: white; text-align: center; font-size: 1em; margin-top: 1.5em;">
                     La respuesta determinará el futuro de la empresa científica
                 </p>
             </section>
@@ -1259,7 +1294,7 @@
             <!-- Referencias Ampliadas -->
             <section class="scrollable">
                 <h2>Referencias Seleccionadas</h2>
-                <ul style="font-size: 0.7em;">
+                <ul style="font-size: 0.65em;">
                     <li>Leonelli, S. (2016). <em>Data‐Centric Biology: A Philosophical Study</em>. University of Chicago Press.</li>
                     <li>Sullivan, E. (2022). Understanding from Machine Learning Models. <em>British Journal for the Philosophy of Science</em>, 73(1).</li>
                     <li>Messeri, L. & Crockett, M.J. (2024). Artificial intelligence and illusions of understanding in scientific research. <em>Nature</em>, 627, 49-58.</li>
@@ -1275,11 +1310,11 @@
             
             <!-- Final Slide -->
             <section data-background="#0366d6" data-background-transition="zoom">
-                <h1 style="color: white; text-align: center; font-size: 4em;">¡Gracias!</h1>
-                <p style="color: white; text-align: center; font-size: 1.5em; margin-top: 2em;">
+                <h1 style="color: white; text-align: center; font-size: 3.5em;">¡Gracias!</h1>
+                <p style="color: white; text-align: center; font-size: 1.3em; margin-top: 1.5em;">
                     ✉ amastobiza@ugr.es
                 </p>
-                <p style="color: white; text-align: center; font-size: 1em; margin-top: 1em;">
+                <p style="color: white; text-align: center; font-size: 0.9em; margin-top: 1em;">
                     "La ciencia debe permanecer humana para seguir siendo ciencia"
                 </p>
             </section>
@@ -1340,6 +1375,9 @@
                     plugins: {
                         legend: {
                             display: false
+                        },
+                        datalabels: {
+                            display: false
                         }
                     },
                     scales: {
@@ -1375,6 +1413,9 @@
                     maintainAspectRatio: false,
                     plugins: {
                         legend: {
+                            display: false
+                        },
+                        datalabels: {
                             display: false
                         }
                     },
@@ -1412,11 +1453,19 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    plugins: {
+                        datalabels: {
+                            display: false
+                        }
+                    },
                     scales: {
                         x: {
                             title: {
                                 display: true,
-                                text: 'Duración de la tarea'
+                                text: 'Duración de la tarea',
+                                font: {
+                                    size: 10
+                                }
                             }
                         },
                         y: {
@@ -1424,7 +1473,10 @@
                             position: 'left',
                             title: {
                                 display: true,
-                                text: 'Costo ($)'
+                                text: 'Costo ($)',
+                                font: {
+                                    size: 10
+                                }
                             }
                         },
                         y1: {
@@ -1432,7 +1484,10 @@
                             position: 'right',
                             title: {
                                 display: true,
-                                text: 'Ratio IA/Humano'
+                                text: 'Ratio IA/Humano',
+                                font: {
+                                    size: 10
+                                }
                             },
                             grid: {
                                 drawOnChartArea: false
@@ -1462,13 +1517,13 @@
             const cellHeight = canvas.height / (domains.length + 1.5);
             
             // Draw headers
-            ctx.font = '14px Arial';
+            ctx.font = '12px Arial';
             ctx.fillStyle = '#222';
             
             // Vision headers (top)
             visions.forEach((vision, i) => {
                 ctx.save();
-                ctx.translate((i + 1.5) * cellWidth, cellHeight * 0.5);
+                ctx.translate((i + 1.5) * cellWidth, cellHeight * 0.4);
                 ctx.rotate(-Math.PI / 4);
                 ctx.fillText(vision, 0, 0);
                 ctx.restore();
@@ -1489,7 +1544,7 @@
                     ctx.fillRect((j + 1) * cellWidth, (i + 1) * cellHeight, cellWidth * 0.8, cellHeight * 0.8);
                     
                     ctx.fillStyle = '#fff';
-                    ctx.font = 'bold 16px Arial';
+                    ctx.font = 'bold 14px Arial';
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'middle';
                     ctx.fillText(value, (j + 1.4) * cellWidth, (i + 1.4) * cellHeight);
